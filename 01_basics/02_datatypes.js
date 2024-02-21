@@ -21,5 +21,5 @@ console.log(typeof "Anurag"); // string type
 
 console.log(typeof 8); //number type
 
-console.log(typeof null);
-console.log(typeof undefined);
+console.log(typeof null); //object type h 
+console.log(typeof undefined); //undefined type h
