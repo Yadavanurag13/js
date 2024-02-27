@@ -44,5 +44,5 @@ function loginUserMessage(username) {
 
 //console.log(loginUserMessage("anurag"));
 //when nothing is passed it will return undefined
-console.log(loginUserMessage());
+// console.log(loginUserMessage());
 
