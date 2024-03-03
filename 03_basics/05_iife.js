@@ -10,7 +10,7 @@
     console.log(`DB connected`);
 })();
 
-//we need to stop function explicitely this time by adding ;
+//we need to stop function explicitely this time by adding
 
 // (() => {
 //     console.log(`DB connected`);
