@@ -50,25 +50,3 @@ const myObject = {
 
 //Objects are not iterable by for of loop
 
-const myObjectN = {
-    'js': 'Javascript',
-    'cpp': 'c++',
-    'rb': 'ruby'
-}
-
-for(const key in myObjectN) {
-   // console.log(key);
-}
-
-for(const key in myObjectN) {
-    //console.log(myObjectN[key]);
-}
-
-
-const narr =['js', 'java', 'cpp']
-
-for(const key in narr) {
-    console.log(key);
-}
-
-//map are not iterable so we can not use for in loop for then
