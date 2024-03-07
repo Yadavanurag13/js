@@ -49,4 +49,3 @@ const myObject = {
 
 
 //Objects are not iterable by for of loop
-
