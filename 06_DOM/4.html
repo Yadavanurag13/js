@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #ffff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        //when we use innerHTML it traverse through all the tree and then insert into the tree
+
+        li.innerHTML = `${langName}`
+
+
+        document.querySelector('.language').appendChild(li)
+    }
+
+    //jitni baar ye function call ho raha h utni baar pura tree traverse karna pad raha h
+
+    //which is not good as we look for complexcity
+
+    addLanguage("Python")
+    addLanguage("Typescript")
+
+
+    //optimised way
+
+    function addOptimalLanguage(langName) {
+
+        //create element
+        const li = document.createElement('li')
+
+        //we are creating a textNode then append of the child after seleting we are puting to that tree
+        li.appendChild(document.createTextNode(langName))
+
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptimalLanguage('Golang')
+
+
+
+    //Edit
+
+    //there is no gap betwween : and nth this is pseudo code for this
+
+    const sec = document.querySelector("li:nth-child(2)")
+
+    console.log(sec)
+
+    // sec.innerHTML = "Java"
+
+    //const sec = document.querySelector('li')
+    
+    const newli = document.createElement('li')
+    newli.textContent = "mojo"
+
+    sec.replaceWith(newli)
+
+    //edit
+
+    const one = document.querySelector("li:nth-child(1)")
+
+    console.log(one)
+
+    const newLang = document.createElement('li')
+    newLang.textContent = "typescript"
+
+    one.replaceWith(newLang)
+
+
+    //remove
+
+    const removelang = document.querySelector("li:last-child")
+
+    removelang.remove();
+</script>
+</html>
