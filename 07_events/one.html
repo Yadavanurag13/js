@@ -52,22 +52,39 @@
     //altKey, ctrlKey, keyCode
 
 
-    document.getElementById('images').addEventListener('click', function() {
+    /*document.getElementById('images').addEventListener('click', function() {
         console.log("clicked inside the ul");
     }, false)
 
     document.getElementById('owl').addEventListener('click', function(e) {
-        console.log('clicked on the owl');
-
+        console.log('clicked on the owl')
         e.stopPropagation();
     }, false)
 
 
     document.getElementById('google').addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
         console.log("google clicked");
-        e.defaultPrevented();
-    })
+    })*/
 
     //there is concept of event bubbling and evnetcapturing
+
+
+
+    document.querySelector('#images').addEventListener('click', function(e) {
+        //console.log(e);
+        console.log(e.target.parentNode);
+        
+        //we have to delete the target parent so that nothing get remain on the page not even bullet
+        
+        if(e.target.tagName == 'IMG') {
+            let removeIt = e.target.parentNode
+            console.log(e.target.id);
+            removeIt.remove()
+        }
+        //removeIt.parentNode.removeChild(removeIt)
+        
+    }, false)
 </script>
 </html>
